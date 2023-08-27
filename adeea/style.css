@@ -1,10 +1,10 @@
 
 nav {
-    height: 3%;
+  height: 40px;
 	background-color: #7749F8; 
   overflow: hidden; 
   box-shadow: 2px 0px 5px grey;
-  border-bottom: 2px solid rgb(223, 231, 163);
+  border-bottom: 2px solid rgb(223, 206, 236);
   align-items: center;
   display: flex;
   justify-content: space-around;
@@ -30,7 +30,7 @@ nav {
 	text-align: center; 
 	padding: 14px 16px; 
 	text-decoration: none; 
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: bold;
     margin-right: 7%
 	;
@@ -42,24 +42,109 @@ nav {
 	color: azure;
   }
   .logo{
-    font-size: 40px;
+    font-size: 15px;
     font-weight: bold;
     color: white;
   }  
   .signup{
     font-size: 40px;
     font-weight: bold;
-    color: white;
+    box-shadow: 2px 0px 5px grey;
+    height: 90px;
+padding-top: 1%;
+
   }  
-  #signup{
-    height: 40px;
-	background-color: #f2f0f8; 
-  overflow: hidden; 
-  box-shadow: 2px 0px 5px grey;
-  border-bottom: 2px solid rgb(223, 231, 163);
- color: #000;
-  display: flex;
-  justify-content: space-around;
+  .up{
+    
+    margin-left: 10%;
+  }
+ 
 
   
+
+
+.from{
+    margin-top: 0%;
+    margin-bottom: 10%;
+}
+
+.input-box{
+    margin: 20px;
+    color: #D4D3D3;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 25px; /* 125% */
+border-bottom: 2px solid #D4D3D3;
+position: relative;
+
+}
+.input-box input{
+background: transparent;
+border: none;
+outline: none;
+
+
+
+}
+.btn {
+    width: 252px;
+    height: 69px;
+    flex-shrink: 0;
+border-radius: 15px;
+box-shadow: 0px 4px 4px 5px #D4D3D3;
+
+color: white;
+font-family: Inter;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 25px; /* 83.333% */
+margin: 20px;
+}
+
+.register-link{
+    margin: 10px;
+}
+.remember-forget{
+    
+    align-content:space-between;
+
+}
+
+  
+
+#getStartedButton{
+    width: 252px;
+    height: 69px;
+    flex-shrink: 0;
+border-radius: 15px;
+box-shadow: 0px 4px 4px 5px #D4D3D3;
+background: #61B846;
+color:white;
+font-family: Inter;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 25px; /* 83.333% */
+
+
+}
+
+.wrapper{
+    height: 110%;
+    width: 40%;
+    margin-top: 5%;
+}
+.warp{
+    height: 110%;
+    width: 40%;
+ margin-top: 20%;
+  color: #8b8484;
+    
+}
+.frum{
+    margin-top: 10%;
+    margin-bottom: 15%;
 }

@@ -15,16 +15,134 @@
 
     <nav id=" logo">
         <div class="logo">Personal blog</div>
-        <ul>   <a href="index.html">login</a>
+        <ul>   <a href="./signin.html">login</a>
        
         </ul>
       </nav>
+<div class="signup"><p class="up"> sign up</p></div>
 
-      <nav id=" signup">
-        <div class="signup">sign up</div>
+
+      <div align="center">
+        <div class="wrapper">
+         
         
-      </nav>
-
-
+            <div class="from">
+            <div class="input-box">
+              <input type="text" placeholder="First Name" id="namebox" class="signup_input"/>
+              <i class="fa-solid fa-user icon"></i>
+            </div>
+      
+            <div class="input-box">
+              <input type="tel" maxlength="11" placeholder="Last Name" id="number" class="signup_input"/>
+              <i class="fa-solid fa-user icon"></i>
+            </div>
+      
+            <div class="input-box">
+              <input type="email" placeholder="Email" id="email" class="signup_input"/>
+              <i class="fa-solid fa-envelope icon"></i>
+            </div>
+      
+            
+            <div class="input-box">
+              <input type="password" id="myInput" placeholder="Password"  class="signup_input" />
+              <i class="fa-solid fa-eye-slash eye icon" onclick="togglePasswordVisibility()"></i>
+            </div>
+            <div class="input-box">
+                <input type="repeat" placeholder="repeat password" id="repeat" class="signup_input"/>
+                <i class="fa-solid fa-eye-slash eye icon"></i>
+              </div>
+          </div>
+          <div class="remember-forget">
+            <label><input type="checkbox"> Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button class="btn" style="background: #7749F8;" id="signinbtn"><p style="color: white; font-weight: bold; font-size: larger;">Sign Up</p></button>
+          <div class="register-link">
+           
+          </div>
+       
+        </div>
+        </div>
+      
+        <script>
+          function togglePasswordVisibility() {
+            var x = document.getElementById("myInput");
+            var eyeIcon = document.querySelector(".eye");
+      
+            if (x.type === "password") {
+              x.type = "text";
+              eyeIcon.classList.remove("fa-eye-slash");
+              eyeIcon.classList.add("fa-eye");
+            } else {
+              x.type = "password";
+              eyeIcon.classList.remove("fa-eye");
+              eyeIcon.classList.add("fa-eye-slash");
+            }
+          }
+        </script>
+      
+      <script type="module">
+          // Import the functions you need from the SDKs you need
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+          import {  getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+          import { getAuth, signInWithEmailAndPassword, onAuthStateChanged,}from"https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+          // TODO: Add SDKs for Firebase products that you want to use
+          // https://firebase.google.com/docs/web/setup#available-libraries
+        
+          // Your web app's Firebase configuration
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+          const firebaseConfig = {
+            apiKey: "AIzaSyBhNk1Ap_bBNFXvIXYLnBQsxTfI0vS3bBE",
+            authDomain: "smit-b9-5571c.firebaseapp.com",
+            databaseURL: "https://smit-b9-5571c-default-rtdb.firebaseio.com",
+            projectId: "smit-b9-5571c",
+            storageBucket: "smit-b9-5571c.appspot.com",
+            messagingSenderId: "567836920600",
+            appId: "1:567836920600:web:650a753fc9a1d2aca26c6d",
+            measurementId: "G-NMXLYR92VE"
+          };
+        
+          
+      
+          // Initialize Firebase
+          const app = initializeApp(firebaseConfig);
+      
+          const db = getDatabase();
+      
+          function signIn() {
+            let username = document.getElementById("namebox");
+            let number = document.getElementById("number");
+            let user_mail = document.getElementById("email");
+            let password = document.getElementById("password");
+            let pass = document.getElementById("pass");
+            let role= 'User'
+      
+            set(ref(db, "Users/" + number.value), {
+              username: username.value,
+              number: number.value,
+              user_mail: user_mail.value,
+              password:myInput.value,
+              role :role,
+            })
+            .then(() => {
+              const user = { email: email };
+                          sessionStorage.setItem('user', JSON.stringify(user));
+              alert("Data saved successfully");
+              window.location.href = './home.html'
+            })
+            .catch((error) => {
+              alert("Error in sending data to the database: " + error);
+            });
+          }
+      
+          var signinbtn = document.getElementById("signinbtn");
+          signinbtn.addEventListener('click', signIn);
+      
+        </script>
+          
+         
+      
+        
+      
 </body>
 </html>
