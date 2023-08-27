@@ -1,0 +1,200 @@
+.navbar-hd{
+    background-color: #7749f8;
+  }
+  
+  .navbar-hd h5{
+    color: #fff;
+  }
+  
+  
+  .loginbtnrouter, .signupbtnrouter{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+  }
+  
+  .headingofnav{
+    height: 10vh;
+    background-color: white;
+    color: black;
+  }
+  
+  body{
+    background-color: #ebebeb;
+  }
+  
+  .signupbody{
+    width: 100vw;
+    height: 83vh;
+  }
+  
+  .signupform{
+    background-color: white;
+    padding-right: 10vw !important;
+    padding-left: 10vw !important;
+  }
+  
+  .signupbtn,.updatepassbtn, .postbtn{
+    background-color: #7749f8;
+    width: 10vw;
+    color: #fff;
+    word-wrap: break-word;
+    border: none;
+  }
+  
+  .signupformchild{
+    border: 1px solid rgba(00, 00, 00, 30%);
+  }
+  
+  .signupformchild:focus{
+    box-shadow: 1px 1px 8px 1px #7749f8;
+    border: none !important;
+  }
+  
+  .currentuserName{
+    color: white;
+  }
+  
+  
+  
+  
+  .dashbordotherbody{
+    width: 80vw;
+  }
+  
+  .dashborddopostdiv{
+    background-color: white;
+  }
+  
+  .postdivdashbord{
+    background-color: white;
+  }
+  
+  .imageofpost{
+    object-fit: contain;
+  }
+  
+  .editdeletarea p{
+    color: #7749f8;
+    padding-bottom: 5px;
+  }
+  
+  .editdeletarea p:hover{
+    text-decoration: underline;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .dashbordotherbody{
+    width: 80vw;
+  }
+  
+  .dashborddopostdiv{
+    background-color: white;
+  }
+  
+  .postdivdashbord{
+    background-color: white;
+  }
+  
+  .imageofpost{
+    object-fit: contain;
+  }
+  
+  .editdeletarea p{
+    color: #7749f8;
+    padding-bottom: 5px;
+  }
+  
+  .editdeletarea p:hover{
+    text-decoration: underline;
+  }
+  
+  .wanttopost{
+    position: fixed !important;
+    bottom: 10vh; 
+    right: 3vw; 
+    background-color: #7749f8;
+  }
+  
+  .wanttopost:hover{
+    color: white;
+  }
+  
+  
+  .postdivpostuser{
+    width: 50vw;
+  }
+  
+  .userprofpostuser{
+    right: 10vw;
+    text-align: end;
+  }
+  
+  .userprofpostuser span{
+    text-decoration: underline;
+  }
+  
+  .userprofpostuser h3{
+    color: #7749f8;
+  }
+  
+  .userprofpostuser img{
+    width: 30vw;
+    height: 60vh;
+    object-fit: cover;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .updatepassbtn{
+    width: 30vw !important;
+  }
+  
+  .dashbordotherbody{
+    width: 80vw;
+  }
+  
+  .imgofprofile{
+    width: 60%;
+    height: 80vh;
+  }
+  
+  .updateprofile{
+    background-color: white;
+  }
+  
+  .passwordchildofupdateprofile{
+    width: 45vw;
+  }
+  
+  .passwordchildofupdateprofile:focus{
+    
+    box-shadow: 1px 1px 8px 1px #7749f8;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

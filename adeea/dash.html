@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./dash.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./home.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   
@@ -18,5 +21,77 @@
         </ul>
       </nav>
 <div class="signup"><p class="up"> Dashboard</p></div>
+
+<div class="dashbordotherbody mt-5 ms-5">
+
+  <div class="dashborddopostdiv shadow p-5 d-flex flex-column">
+      <input type="text" class="rounded border m-1 py-2 px-3" placeholder="Placeholder" name="" id="textheading">
+      <textarea id="textdata" class="border rounded m-1 py-2 px-3" placeholder="Whats in your Mind" cols="30" rows="10"></textarea>
+      <input type="button" value="Publish Blog" class="mt-2 fw-bold rounded py-1 shadow postbtn" id="publishBook">
+  </div>
+  <!-- post area -->
+  <div class="mt-5 postdivhd">
+      <h3>My Blogs</h3>
+      
+      </div>
+  </div>
+</div>
+<div id="posts"></div>
+<div id="displayDiv"></div>
+<div id="selectedPost">
+    <img id="selectedImage" src="IMG/images.jpg" alt="Selected Post Image">
+    <h2 id="selectedTitle">ARTIFICAL INTELLEGNCE</h2>
+    <p id="selectedDate">27-8-2023</p>
+    <p id="selectedDescription">Artificial intelligence (AI) is the intelligence of machines or software, as opposed to the intelligence of human beings or animals</p>
+    <button id="editButton" style="margin-right: 2%;">delete</button><button id="editButton">Edit</button>
+    </div>
+    
+
+<div id="selectedPost">
+    <img id="selectedImage" src="IMG/images.jpg" alt="Selected Post Image">
+    <h2 id="selectedTitle">NETWORK</h2>
+    <p id="selectedDate">21-8-2023</p>
+    <p id="selectedDescription">A computer network is a set of computers sharing resources located on or provided by network nodes. Computers use common communication protocols over ...</p>
+    <button id="editButton" style="margin-right: 2%;">delete</button><button id="editButton">Edit</button>
+</div>
+<script>
+
+firebase.initializeApp(firebaseConfig);  
+  const app =InitializeApp(firebaseConfig);
+      console.log(app)     
+const db = getDatabase(app);
+ const auth =getAuth();
+ document.getElementById("publishBook").addEventListener("click", function() {
+    var heading = document.getElementById("textheading").value;
+    var textdata = document.getElementById("textdata").value;
+
+    // Firebase Realtime Database reference
+    var dbRef = firebase.database().ref().child("blogs");
+    var newBlogRef = dbRef.push();
+
+    // Save data to Firebase
+    newBlogRef.set({
+      heading: heading,
+      textdata: textdata
+    });
+
+    // Display saved data on the page
+    var displayDiv = document.getElementById("displayDiv");
+    displayDiv.innerHTML += `<div class="blog">
+      <h2>${heading}</h2>
+      <p>${textdata}</p>
+    </div>`;
+  });
+
+</script>
+  <!-- javascript of bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="config.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js"></script>
+ 
 </body>
 </html>

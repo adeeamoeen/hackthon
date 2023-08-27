@@ -13,7 +13,7 @@
 <body>
     <nav id=" logo">
         <div class="logo">Personal blog</div>
-        <ul>   <li id="userName" style="display: none;"></li> <a href="./signup.html">signup</a>
+        <ul>   <li id="userName"></li> <a href="./signup.html">signup</a>
        
         </ul>
       </nav>
@@ -110,13 +110,9 @@ function showUserName(name) {
                         const user = { email: email };
                         sessionStorage.setItem('user', JSON.stringify(user));
                         alert('User created successfully.')
-                        window.location.href = '../admin.html'
-                    }
-                    else {
-                        const user = { email: email  };
-                        sessionStorage.setItem('user', JSON.stringify(user));
                         window.location.href = './dash.html'
                     }
+                    
                 } else {
                     alert("No data available");
                 }
