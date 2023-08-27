@@ -1,0 +1,65 @@
+
+nav {
+    height: 3%;
+	background-color: #7749F8; 
+  overflow: hidden; 
+  box-shadow: 2px 0px 5px grey;
+  border-bottom: 2px solid rgb(223, 231, 163);
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+
+  
+}
+  
+  
+  nav ul {
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+	display: flex; 
+  }
+  
+  nav li {
+	flex: 1; 
+  }
+  
+  nav a {
+	display: block; 
+	color: white; 
+	text-align: center; 
+	padding: 14px 16px; 
+	text-decoration: none; 
+	font-size: 20px;
+	font-weight: bold;
+    margin-right: 7%
+	;
+
+  }
+  
+  nav a:hover {
+	background-color: #8b8484; 
+	color: azure;
+  }
+  .logo{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+  }  
+  .signup{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+  }  
+  #signup{
+    height: 40px;
+	background-color: #f2f0f8; 
+  overflow: hidden; 
+  box-shadow: 2px 0px 5px grey;
+  border-bottom: 2px solid rgb(223, 231, 163);
+ color: #000;
+  display: flex;
+  justify-content: space-around;
+
+  
+}
