@@ -15,7 +15,7 @@
 
     <nav id=" logo">
         <div class="logo">Personal blogging App</div>
-        <ul>   <li id="userName" style="display: none;"></li> <a href="./signin.html">login</a>
+        <ul>   <li id="userName" ></li> <a href="./signin.html">login</a>
        
         </ul>
       </nav>
@@ -128,7 +128,7 @@
               const user = { email: email };
                           sessionStorage.setItem('user', JSON.stringify(user));
               alert("Data saved successfully");
-              window.location.href = './home.html'
+              window.location.href = './dash.html'
             })
             .catch((error) => {
               alert("Error in sending data to the database: " + error);

@@ -1,4 +1,9 @@
 
+   
+    const app =InitializeApp(firebaseConfig);
+    console.log(app)     
+const db = getDatabase(app);
+const auth =getAuth();    
 
 const selectedPostDiv = document.getElementById('selectedPost');
 const selectedImage = document.getElementById('selectedImage');
@@ -33,10 +38,5 @@ editButton.addEventListener('click', () => {
     }
 });
 
-// ... Rest of the code ...
-
-
-
-// ... Rest of the code ...
 
 
